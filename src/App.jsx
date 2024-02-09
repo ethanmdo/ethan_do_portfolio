@@ -6,9 +6,9 @@ import Home from "./components/Home";
 const App = () => {
   return (
     <div>
-
       <NavBar />
       <Home />
+      <div className="flex justify-center items-center min-h-screen"></div>
     </div>
   );
 };

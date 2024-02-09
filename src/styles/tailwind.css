@@ -3,54 +3,111 @@
 @tailwind utilities;
 
 @keyframes slideFadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .nav-link::after {
-    content: '';
-    display: block;
-    margin: auto;
-    height: 2px;
-    width: 0px;
-    background: transparent;
-    transition: width 0.5s ease, background-color 0.5s ease;
+  content: "";
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  background: black;
+}
+.typing-effect p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5em;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: currentColor;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
-  
-  .nav-link:hover::after {
-    width: 100%;
-    background: black;
-  }
-  .typing-effect p {
-    font-family: 'Courier New', Courier, monospace; 
-    font-size: 1.5em;
-  }
-  
-  .cursor {
-    display: inline-block;
-    width: 2px;
-    height: 1em;
-    background-color: currentColor;
-    margin-left: 2px;
-    animation: blink 1s infinite;
-  }
-  
-  @keyframes blink {
-    50% {
-      opacity: 0;
-    }
-  }
-  #tsparticles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-  }
-  
-  
+}
+.slideshow-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px; /* Ensure this matches the containerWidth in your React component */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slideshow {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slideshow-image {
+  /* The width is now dynamically set in the React component, so you might not need this */
+  /* Ensure the margin set here is consistent with the React component, or remove it if set inline */
+  margin: 5px; /* Matches the inline style margin in the React component */
+  object-fit: cover;
+  border-radius: 10px;
+  flex: 0 0 auto;
+}
+
+.slideshow-controls {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slideshow-button {
+  /* Button styles appear consistent and might not need changes */
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.slideshow-button:hover,
+.slideshow-button:focus {
+  background-color: rgba(0, 0, 0, 1);
+  color: #fff;
+  transform: scale(1.1);
+  outline: none;
+}
+
+.slideshow-button:disabled {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.3);
+  cursor: not-allowed;
+  transform: scale(1);
+}

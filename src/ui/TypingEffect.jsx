@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../styles/tailwind.css"; // Make sure to create this CSS file
 
 const TypingEffect = () => {
-  const roles = ["software developer", "student", "designer", "blogger"]; // Add more roles as needed
+  const roles = ["engineer", "student", "designer", "developer"]; // Add more roles as needed
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [reverse, setReverse] = useState(false);
