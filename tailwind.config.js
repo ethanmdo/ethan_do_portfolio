@@ -7,6 +7,9 @@ export default {
       fontFamily: {
         inter: ["inter", "serif"],
       },
+      colors: {
+        'custom-dark': '#121212',
+      },
     },
   },
   plugins: [],

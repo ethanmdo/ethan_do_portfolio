@@ -25,7 +25,7 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-black bg-white fixed nav">
+    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-custom-dark fixed z-50 border-b border-white border-opacity-50">
       <div>
         <h1 className="text-4xl font-bold ml-2">DONUT.</h1>
       </div>
@@ -34,7 +34,7 @@ const NavBar = () => {
         {links.map(({ id, link }) => (
           <li
             key={id}
-            className="px-4 nav-link cursor-pointer capitalize text-lg hover:text-black font-medium transition-colors duration-300 relative"
+            className="px-4 nav-link cursor-pointer capitalize text-lg hover:text-white font-medium transition-colors duration-300 relative"
           >
             <span className="block relative">{link}</span>
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black transition-all duration-300 hover:w-full"></span>
@@ -52,7 +52,7 @@ const NavBar = () => {
       </div>
 
       {nav && (
-        <ul className={`flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-white md:hidden nav-content ${nav ? 'active' : ''}`}>
+        <ul className={`flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-black md:hidden nav-content ${nav ? 'active' : ''}`}>
           {links.map(({ id, link }, index) => (
             <li
               key={id}

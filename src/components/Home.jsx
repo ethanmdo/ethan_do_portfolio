@@ -28,17 +28,20 @@ const Home = () => {
   ];
 
   return (
-    <main class="min-h-screen bg-white text-black flex flex-col justify-center items-center pt-10 md:pt-20">
-      {/* Typing Effect Section */}
+    <main className="min-h-screen bg-#121212 text-white flex flex-col justify-center items-center pt-24 md:pt-28">
       <section className="text-center p-4">
+        <h2 className="text-5xl md:text-6xl font-bold mb-4 name-home">
+          Ethan Do
+        </h2>
+      </section>
+
+      {/* Typing Effect Section with adjusted spacing */}
+      <section className="text-center p-4 mt-2">
+        {" "}
+        {/* Reduced top margin */}
         <p className="text-xl font-light">
           <TypingEffect />
         </p>
-      </section>
-
-      {/* Intro Section */}
-      <section className="text-center p-4">
-        <h2 className="text-3xl font-bold mb-4">Welcome to DONUT.</h2>
       </section>
 
       {/* Slideshow Section */}
@@ -48,7 +51,7 @@ const Home = () => {
 
       {/* Call-to-Action Button */}
       <section className="mt-8">
-        <button className="bg-black text-white font-medium py-2 px-6 rounded hover:bg-gray-800 transition-colors duration-300">
+        <button className="bg-white text-black font-medium py-2 px-6 rounded border border-transparent hover:bg-transparent hover:text-white hover:border-white transition-colors duration-300">
           Explore More
         </button>
       </section>
