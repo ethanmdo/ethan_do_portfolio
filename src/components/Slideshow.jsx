@@ -14,13 +14,12 @@ const Slideshow = ({ images }) => {
     setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
   };
 
-  const imageMargin = 5; // Margin on each side of an image
-  const containerWidth = 600; // The width of the slideshow container
+  const imageMargin = 5; 
+  const containerWidth = 600;
 
-  // Width of one image, accounting for the margin on both sides
   const imageWidth = containerWidth / imagesPerView - imageMargin * 2;
 
-  // The translateX value should consider the total width of 2 images plus the margin between them
+  
   const translateX = -(currentIndex * (imageWidth + imageMargin * 2)) + "px";
 
   return (

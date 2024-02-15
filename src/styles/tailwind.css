@@ -14,8 +14,8 @@
 }
 
 body {
-  background-color: #121212; /* Dark background for the whole page */
-  color: #e0e0e0; /* Light text color for contrast */
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 .nav-link::after {
@@ -53,9 +53,7 @@ body {
 .nav-content.active {
   z-index: 9;
 }
-/* .nav-toggle {
-  z-index: 30; 
-} */
+
 @keyframes blink {
   50% {
     opacity: 0;
@@ -79,9 +77,7 @@ body {
 }
 
 .slideshow-image {
-  /* The width is now dynamically set in the React component, so you might not need this */
-  /* Ensure the margin set here is consistent with the React component, or remove it if set inline */
-  margin: 5px; /* Matches the inline style margin in the React component */
+  margin: 5px;
   object-fit: cover;
   border-radius: 10px;
   flex: 0 0 auto;
@@ -98,7 +94,6 @@ body {
 }
 
 .slideshow-button {
-  /* Button styles appear consistent and might not need changes */
   background-color: rgba(0, 0, 0, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: rgba(255, 255, 255, 0.9);
@@ -125,16 +120,14 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-  /* Ensures the image scales within its container */
   will-change: transform, filter;
 }
 
 .slideshow-image:hover {
-  transform: scale(1.05) rotate(2deg); /* Slightly larger and rotated */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
-  filter: brightness(1.1); /* Slightly brighter */
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.1);
 }
-
 
 .slideshow-button:disabled {
   background-color: rgba(0, 0, 0, 0.4);
@@ -171,4 +164,8 @@ body {
 .tooltip-icon:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
+}
+
+.hover\:glow:hover {
+  box-shadow: 0 0 15px rgb(240, 240, 240); 
 }

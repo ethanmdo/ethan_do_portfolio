@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../styles/tailwind.css";
 import {
   FaHtml5,
   FaCss3Alt,
