@@ -46,7 +46,7 @@ export const Contact = () => {
       <div className="text-center mb-10">
         <h1 className="text-5xl md:text-6xl font-bold mb-4">Contact Me</h1>
         <p className="text-xl font-light">
-          Feel free to reach out through any of the platforms below or send a direct message using the form.
+          Let's chat! Feel free to reach out using the form below.
         </p>
       </div>
 
