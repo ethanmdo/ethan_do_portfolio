@@ -15,40 +15,42 @@ import "../styles/tailwind.css";
 export const Contact = () => {
   const form = useRef();
   const [messageStatus, setMessageStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false); // To handle form submission state
 
   useEffect(() => {
-    emailjs.init("X4jKFDWe5Cs_o1s0t");
+    emailjs.init("X4jKFDWe5Cs_o1s0t"); // Replace with your actual EmailJS user ID
   }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsSubmitting(true); // Indicate the form is being submitted
 
-    emailjs.sendForm("service_tarrzlx", "template_juu8k3r", form.current).then(
-      (result) => {
-        setMessageStatus("Message sent successfully!");
-        setTimeout(() => setMessageStatus(""), 5000); // Clear message after 5 seconds
-      },
-      (error) => {
-        setMessageStatus("Failed to send the message. Please try again.");
-        setTimeout(() => setMessageStatus(""), 5000); // Clear message after 5 seconds
-      }
-    );
+    emailjs.sendForm("service_tarrzlx", "template_juu8k3r", form.current) // Replace with your service ID and template ID
+      .then(
+        (result) => {
+          setMessageStatus("Message sent successfully!");
+          setIsSubmitting(false); // Reset form submission state
+          form.current.reset(); // Clear the form fields
+          setTimeout(() => setMessageStatus(""), 5000); // Hide the status message after 5 seconds
+        },
+        (error) => {
+          setMessageStatus("Failed to send the message. Please try again.");
+          setIsSubmitting(false); // Reset form submission state
+          setTimeout(() => setMessageStatus(""), 5000); // Hide the status message after 5 seconds
+        }
+      );
   };
 
   return (
-    <main
-      id="contact-section"
-      className="bg-[#121212] min-h-screen flex flex-col justify-center items-center text-white pt-10 md:pt-20"
-    >
- <div className="text-center mb-10">
-  <h1 className="text-5xl md:text-6xl font-bold mb-4">Contact Me</h1>
-  <p className="text-xl font-light">
-    Feel free to reach out through any of the platforms below or send a direct message using the form.
-  </p>
-</div>
+    <main id="contact-section" className="bg-[#121212] min-h-screen flex flex-col justify-center items-center text-white pt-10 md:pt-20">
+      <div className="text-center mb-10">
+        <h1 className="text-5xl md:text-6xl font-bold mb-4">Contact Me</h1>
+        <p className="text-xl font-light">
+          Feel free to reach out through any of the platforms below or send a direct message using the form.
+        </p>
+      </div>
 
-
-<div className="flex flex-wrap justify-center items-center gap-4 mb-8">
+      <div className="flex flex-wrap justify-center items-center gap-4 mb-8">
   <a
     href="mailto:ethando@gmail.com"
     className="flex items-center group"
@@ -123,42 +125,40 @@ export const Contact = () => {
         </a>
       </div>
 
-      <form
-        ref={form}
-        onSubmit={sendEmail}
-        className="w-full max-w-lg p-5 space-y-4 bg-[#121212] rounded-lg shadow-lg"
-      >
-    <input
-  type="text"
-  name="user_name"
-  placeholder="Your Name"
-  className="w-full p-3 rounded bg-[#121212] text-white border border-white focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-300"
-  required
-/>
-<input
-  type="email"
-  name="user_email"
-  placeholder="Your Email"
-  className="w-full p-3 rounded bg-[#121212] text-white border border-white focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-300"
-  required
-/>
-<textarea
-  name="message"
-  placeholder="Your Message"
-  rows="5"
-  className="w-full p-3 rounded bg-[#121212] text-white border border-white focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-300"
-  required
-></textarea>
-<button
-  type="submit"
-  className="w-full p-3 bg-[#121212] border border-white text-white font-bold rounded transition duration-300 ease-in-out hover:bg-white hover:text-black hover:border-transparent"
->
-  Send Message
-</button>
-
+      <form ref={form} onSubmit={sendEmail} className="w-full max-w-lg p-5 space-y-4 bg-[#121212] rounded-lg shadow-lg">
+        <input
+          type="text"
+          name="user_name"
+          placeholder="Your Name"
+          className="w-full p-3 rounded bg-[#121212] text-white border border-white focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-300"
+          required
+        />
+        <input
+          type="email"
+          name="user_email"
+          placeholder="Your Email"
+          className="w-full p-3 rounded bg-[#121212] text-white border border-white focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-300"
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="5"
+          className="w-full p-3 rounded bg-[#121212] text-white border border-white focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-300"
+          required
+        ></textarea>
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full p-3 bg-[#121212] border border-white text-white font-bold rounded transition duration-300 ease-in-out hover:bg-white hover:text-black hover:border-transparent"
+        >
+          {isSubmitting ? "Sending..." : "Send Message"}
+        </button>
 
         {messageStatus && (
-          <div className="text-center mt-4">{messageStatus}</div>
+          <div className="text-center mt-4">
+            {messageStatus}
+          </div>
         )}
       </form>
     </main>
