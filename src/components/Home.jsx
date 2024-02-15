@@ -49,50 +49,50 @@ const Home = () => {
       </section>
 
       <section className="mt-0">
-  <div className="flex space-x-4 justify-center">
-    <a
-      href="https://www.linkedin.com/in/ethanmdo/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="transition-transform duration-300 ease-in-out transform hover:scale-110"
-    >
-      <FaLinkedin className="text-4xl hover:text-blue-700" />
-    </a>
-    <a
-      href="https://github.com/ethanmdo"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="transition-transform duration-300 ease-in-out transform hover:scale-110"
-    >
-      <FaGithub className="text-4xl hover:text-gray-700" />
-    </a>
-    <a
-      href="https://www.instagram.com/ethanmdo/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="transition-transform duration-300 ease-in-out transform hover:scale-110"
-    >
-      <FaInstagram className="text-4xl hover:text-pink-600" />
-    </a>
-    <a
-      href="https://www.youtube.com/channel/UCYzuWSmay1Bp-IIbynnQffg"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="transition-transform duration-300 ease-in-out transform hover:scale-110"
-    >
-      <FaYoutube className="text-4xl hover:text-red-600" />
-    </a>
-    <a
-      href="https://twitter.com/ethanmdo"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="transition-transform duration-300 ease-in-out transform hover:scale-110"
-    >
-      <FaXTwitter className="text-4xl hover:text-blue-400" /> {/* Adjust the icon and color as necessary */}
-    </a>
-  </div>
-</section>
-
+        <div className="flex space-x-4 justify-center">
+          <a
+            href="https://www.linkedin.com/in/ethanmdo/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-transform duration-300 ease-in-out transform hover:scale-110"
+          >
+            <FaLinkedin className="text-4xl hover:text-blue-700" />
+          </a>
+          <a
+            href="https://github.com/ethanmdo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-transform duration-300 ease-in-out transform hover:scale-110"
+          >
+            <FaGithub className="text-4xl hover:text-gray-700" />
+          </a>
+          <a
+            href="https://www.instagram.com/ethanmdo/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-transform duration-300 ease-in-out transform hover:scale-110"
+          >
+            <FaInstagram className="text-4xl hover:text-pink-600" />
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCYzuWSmay1Bp-IIbynnQffg"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-transform duration-300 ease-in-out transform hover:scale-110"
+          >
+            <FaYoutube className="text-4xl hover:text-red-600" />
+          </a>
+          <a
+            href="https://twitter.com/ethanmdo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-transform duration-300 ease-in-out transform hover:scale-110"
+          >
+            <FaXTwitter className="text-4xl hover:text-blue-400" />{" "}
+            {/* Adjust the icon and color as necessary */}
+          </a>
+        </div>
+      </section>
     </main>
   );
 };
