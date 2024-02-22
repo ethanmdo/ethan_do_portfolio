@@ -27,8 +27,9 @@ const NavBar = () => {
   }, [nav]);
 
   const links = [
-    { id: "home-section", link: "home" }, // Ensure id matches your actual section IDs
+    { id: "home-section", link: "home" }, 
     { id: "about-section", link: "about" },
+    { id: "projects-section", link: "projects" },
     { id: "experience-section", link: "experience" },
     { id: "contact-section", link: "contact" },
   ];
