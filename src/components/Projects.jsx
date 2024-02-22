@@ -9,21 +9,21 @@ const Projects = () => {
       title: "CargoGuardian",
       image: project1Image,
       description:
-        "A cutting-edge logistics platform leveraging IoT and AI for real-time tracking.",
+        "A mobile application mitigating risk for logistics companies.",
       link: "https://devpost.com/software/cargoguardian",
     },
     {
       title: "ActiveTrackR",
       image: project2Image,
       description:
-        "A fitness app that uses gamification to encourage daily exercise and healthy living.",
+        "A fitness web app that encourages healthy living for all users.",
       link: "#",
     },
     {
       title: "DailyMixer",
       image: project3Image,
       description:
-        "A music discovery app that creates daily playlists based on your listening habits.",
+        "A music program that creates daily playlists based on your listening habits.",
       link: "#",
     },
   ];
