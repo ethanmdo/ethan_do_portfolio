@@ -9953,9 +9953,9 @@ const Bd = "./assets/professional-AUNVLlZ1.png",
     const e = [
         {
           role: "SWE Intern",
-          company: "???",
+          company: "CapTech",
           period: "June 2024 - August 2024",
-          url: "https://www.amazon.jobs/en/",
+          url: "https://www.captechconsulting.com/",
         },
         {
           role: "Undergraduate Research Assistant",
@@ -10407,7 +10407,7 @@ const xc = async (e, t, n = {}) => {
   },
   n0 = "./assets/cargo-UowTzYDr.png",
   r0 = "./assets/active-9jXG7hKU.png",
-  l0 = "./assets/spotify-KXPS7In1.png",
+  l0 = "./assets/green-klDOzIF8.png",
   i0 = () => {
     const e = [
       {
@@ -10425,11 +10425,11 @@ const xc = async (e, t, n = {}) => {
         link: "#",
       },
       {
-        title: "DailyMixer",
+        title: "GreenThreads",
         image: l0,
         description:
-          "A music program that creates daily playlists based on your listening habits.",
-        link: "#",
+          "A website aiming to eliminate fast fashion and reduce carbon footprint.",
+        link: "https://devpost.com/software/greenthreads",
       },
     ];
     return p.jsxs("main", {

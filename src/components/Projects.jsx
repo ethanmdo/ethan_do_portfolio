@@ -1,7 +1,7 @@
 import React from "react";
 import project1Image from "../assets/cargo.png";
 import project2Image from "../assets/active.png";
-import project3Image from "../assets/spotify.png";
+import project3Image from "../assets/green.png";
 
 const Projects = () => {
   const projects = [
@@ -20,11 +20,11 @@ const Projects = () => {
       link: "#",
     },
     {
-      title: "DailyMixer",
+      title: "GreenThreads",
       image: project3Image,
       description:
-        "A music program that creates daily playlists based on your listening habits.",
-      link: "#",
+        "A website aiming to eliminate fast fashion and reduce carbon footprint.",
+      link: "https://devpost.com/software/greenthreads",
     },
   ];
 
