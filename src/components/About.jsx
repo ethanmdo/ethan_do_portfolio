@@ -28,7 +28,7 @@ const About = () => {
           {/* Bio & Skills Section */}
           <section className="mb-8 mt-4">
             <p>
-              Second year student at Virginia Tech studying computer science
+              Third year student at Virginia Tech studying computer science
               with an emphasis on full-stack development. With a passion for
               everything technology, I am committed to learning new and
               innovative tools. As I progress in my career, I hope to continue
