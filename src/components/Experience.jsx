@@ -19,7 +19,7 @@ const Experience = () => {
     {
       role: "Undergraduate Research Assistant",
       company: "Reach Lab VT",
-      period: "February 2024 - Present",
+      period: "February 2024 - May 2024",
       url: "https://reach.cs.vt.edu/",
     },
     {
