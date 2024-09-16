@@ -9955,7 +9955,7 @@ const Bd = "./assets/professional-AUNVLlZ1.png",
           role: "SWE Intern",
           company: "???",
           period: "Summer 2025",
-          url: "https://www.capitalone.com/",
+          url: "https://github.com/SimplifyJobs/Summer2025-Internships",
         },
         {
           role: "SWE Intern",
