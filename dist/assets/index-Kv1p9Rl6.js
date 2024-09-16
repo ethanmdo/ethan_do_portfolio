@@ -9570,7 +9570,7 @@ const Sd = () => {
             }),
           ],
         }),
-      ],ß
+      ],
     });
   },
   Cd = "./assets/drink-RW2zOwh2.png",
@@ -9854,7 +9854,7 @@ const Bd = "./assets/professional-AUNVLlZ1.png",
                 className: "mb-8 mt-4",
                 children: p.jsx("p", {
                   children:
-                    "Second year student at Virginia Tech studying computer science with an emphasis on full-stack development. With a passion for everything technology, I am committed to learning new and innovative tools. As I progress in my career, I hope to continue contributing to projects that push the boundaries of the digital realm.",
+                    "Third year student at Virginia Tech studying computer science with an emphasis on full-stack development. With a passion for everything technology, I am committed to learning new and innovative tools. As I progress in my career, I hope to continue contributing to projects that push the boundaries of the digital realm.",
                 }),
               }),
               p.jsxs("section", {
@@ -9951,6 +9951,12 @@ const Bd = "./assets/professional-AUNVLlZ1.png",
     }),
   $d = () => {
     const e = [
+        {
+          role: "SWE Intern",
+          company: "???",
+          period: "Summer 2025",
+          url: "https://www.capitalone.com/",
+        },
         {
           role: "SWE Intern",
           company: "CapTech",

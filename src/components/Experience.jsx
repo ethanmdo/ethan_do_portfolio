@@ -6,6 +6,12 @@ const Experience = () => {
   const professionalExperiences = [
     {
       role: "SWE Intern",
+      company: "???",
+      period: "Summer 2025",
+      url: "https://www.capitalone.com/",
+    },
+    {
+      role: "SWE Intern",
       company: "CapTech",
       period: "June 2024 - August 2024",
       url: "https://www.captechconsulting.com/",
